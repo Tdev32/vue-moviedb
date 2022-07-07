@@ -65,7 +65,7 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 450px) {
   .navigation {
     flex-direction: column;
   }
@@ -75,7 +75,7 @@ h1 {
     text-align: center;
   }
   #nav {
-    /* width: 7rem; */
+    width: 6.9rem;
     padding: 0 0 30px 0;
     margin: 0 auto;
   }
