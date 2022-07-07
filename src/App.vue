@@ -75,7 +75,7 @@ h1 {
     text-align: center;
   }
   #nav {
-    width: 6.7rem;
+    width: 7rem;
     padding: 0 0 30px 0;
     margin: 0 auto;
   }
