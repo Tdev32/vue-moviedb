@@ -64,4 +64,15 @@ export default {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .movie-container {
+    width: 70%;
+    flex-direction: column;
+    align-items: start;
+  }
+  .movie-details {
+    text-align: center;
+  }
+}
+
 </style>

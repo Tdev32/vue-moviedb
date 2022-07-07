@@ -130,7 +130,7 @@ a {
 @media only screen and (max-width: 450px) {
   .container {
     margin: 0 auto;
-    width: 71%;
+    width: 70.5%;
     grid-template-columns: 1fr;
   }
   li > img {
