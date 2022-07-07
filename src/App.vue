@@ -64,4 +64,20 @@ h1 {
     margin: 0 auto;
   }
 }
+
+@media only screen and (max-width: 430px) {
+  .navigation {
+    flex-direction: column;
+  }
+  h1 {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  #nav {
+    width: 6.7rem;
+    padding: 0 0 30px 0;
+    margin: 0 auto;
+  }
+}
 </style>
