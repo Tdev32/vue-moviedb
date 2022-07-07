@@ -1,5 +1,8 @@
 <template>
-  <Movies/>
+  <header>
+    <img src="../assets/thebatman.jpeg" alt="">
+  </header>
+  <Movies />
 </template>
 
 <script>
@@ -12,3 +15,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+header > img {
+  width: 100vw;
+}
+</style>
