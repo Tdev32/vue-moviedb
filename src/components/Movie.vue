@@ -79,7 +79,6 @@ export default {
   width: 15%;
   display: flex;
   flex-direction: column;
-  
 }
 .actor-name {
   margin-top: 6px;
@@ -92,10 +91,18 @@ export default {
 }
 
 @media only screen and (max-width: 560px) {
+  .movie-background {
+    height: 81rem;
+    background-color: #181818;
+  }
+  .movie-background > img {
+    width: 160%;
+    transform: translateX(-18%);
+  }
   .movie-container {
     position: static;
     width: 70%;
-    transform: translateY(-8%);
+    transform: translateY(-28%);
     flex-direction: column;
   }
   .movie-container > img {
@@ -116,6 +123,12 @@ export default {
     width: 30%;
     display: flex;
     flex-direction: column;
+  }
+  .actor-name {
+    width: 60px;
+    margin-top: 6px;
+    font-size: 10px;
+    text-align: center;
   }
 }
 
