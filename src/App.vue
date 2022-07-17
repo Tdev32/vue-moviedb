@@ -1,9 +1,11 @@
 <template>
   <div class="navigation">
-    <h1>Vue Films</h1>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container flex">
+      <h1>Vue Films</h1>
+      <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
+      </div>
     </div>
   </div>
   <router-view/>
@@ -24,19 +26,24 @@ body {
 }
 
 h1 {
+  margin: 0;
   color: red;
-  padding: 0 80px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .navigation {
   background-color: #171717;
-  display: flex;
-}
-
-#nav {
-  width: 8rem;
-  margin-left: auto;
-  padding: 30px 60px;
 }
 
 #nav a {
@@ -51,32 +58,6 @@ h1 {
 
 @media only screen and (max-width: 560px) {
   .navigation {
-    flex-direction: column;
-  }
-  h1 {
-    width: 100%;
-    padding: 0;
-    text-align: center;
-  }
-  #nav {
-    width: 6.5rem;
-    padding: 0 0 30px 0;
-    margin: 0 auto;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .navigation {
-    flex-direction: column;
-  }
-  h1 {
-    width: 100%;
-    padding: 0;
-    text-align: center;
-  }
-  #nav {
-    width: 7rem;
-    padding: 0 0 30px 0;
     margin: 0 auto;
   }
 }

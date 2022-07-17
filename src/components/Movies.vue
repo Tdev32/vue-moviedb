@@ -8,16 +8,15 @@
   <!-- Movie list -->
     
   <div class="container">
-    <ul class="movie-group" v-for="movie in movies.results" v-bind:key="movie.id">
-      <li>
-        <router-link :to="'/movie/' + movie.id">
-          <img :src="imageUrl + movie.poster_path" alt="">
-          <div class="text-background">
-            <span class="movie-title">{{ movie.title }}</span>
-          </div>
-        </router-link>
-      </li>
-    </ul>
+    <div class="movie-item" v-for="movie in movies.results" v-bind:key="movie.id">
+      <router-link :to="'/movie/' + movie.id">
+        <img class="movie-image" :src="imageUrl + movie.poster_path" alt="">
+        <div class="text-background">
+          <span class="movie-title">{{ movie.title }}</span>
+        </div>
+      </router-link>
+    </div>
+    
   </div>
 </template>
 
@@ -29,7 +28,7 @@ export default {
     return {
       API_KEY: "2f8ad00f27f59846e18f2a0fa95ac328",
       baseURL: "https://api.themoviedb.org/3/",
-      imageUrl: "https://image.tmdb.org/t/p/w300/",
+      imageUrl: "https://image.tmdb.org/t/p/original/",
       movies: [],
     }
   },
@@ -51,10 +50,6 @@ export default {
   width: 19rem;
   margin: 0 auto 2rem auto;
 }
-ul, li {
-  margin: 0;
-  padding: 0;
-}
 input {
   padding: 12px;
   width: 12rem;
@@ -62,19 +57,24 @@ input {
   border-radius: 50px;
   border: 1px solid lightgray;
 }
-li {
+.movie-item {
+  width: 20%;
   position: relative;
-  list-style-type: none;
+  text-align: center;
+}
+.movie-image {
+  width: 96%;
+  border-radius: 5px;
 }
 img:hover {
   cursor: pointer;
 }
 .container {
-  width: 1275px;
+  width: 90%;
   margin: 0 auto;
-  max-width: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 button {
   width: 6rem;
@@ -91,16 +91,14 @@ button:hover {
   cursor: pointer;
 }
 
-.movie-group {
-  width: 60%;
-}
-
 .text-background {
+  width: 96%;
   position: absolute;
+  border-radius: 5px;
   background-color: rgba(255, 0, 0, 0.6);
-  width: 300px;
   height: 3rem;
-  bottom: 6px;
+  bottom: 5.7px;
+  left: 5px;
 }
 
 .movie-title {
@@ -117,24 +115,28 @@ a {
 }
 
 @media only screen and (max-width: 560px) {
+  .movie-item {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+  }
+  img {
+    border-radius: 5px;
+  }
+  .text-background {
+    width: 96.3%;
+    height: 1.6rem;
+    border-radius: 5px;
+  }
+  .movie-title {
+    font-size: .6rem;
+  }
   .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
     margin: 0 auto;
-    width: 60%;
-    grid-template-columns: 1fr;
-  }
-  li > img {
-    width: 150px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .container {
-    margin: 0 auto;
-    width: 70.5%;
-    grid-template-columns: 1fr;
-  }
-  li > img {
-    width: 150px;
   }
 }
 
