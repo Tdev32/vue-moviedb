@@ -93,6 +93,7 @@ export default {
 @media only screen and (max-width: 560px) {
   .movie-background {
     height: 83rem;
+    overflow: hidden;
     background-color: #181818;
   }
   .movie-background > img {
