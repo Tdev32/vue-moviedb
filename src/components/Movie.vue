@@ -92,7 +92,7 @@ export default {
 
 @media only screen and (max-width: 560px) {
   .movie-background {
-    height: 81rem;
+    height: 83rem;
     background-color: #181818;
   }
   .movie-background > img {
