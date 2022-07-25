@@ -46,12 +46,14 @@ export default {
 
 <style scoped>
 .movie-background {
+  height: 100vh;
   position: relative;
 }
 .movie-container {
   position: absolute;
-  top: 5rem;
-  left: 9rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 1100px;
   margin: 0 auto;
   display: flex;
